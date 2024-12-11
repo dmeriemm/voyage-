@@ -245,11 +245,13 @@ footer {
         font-size: 0.8rem; /* Réduire encore la taille de la police des labels sur mobile */
     }
     .consentement {
-    text-align: left; /* Aligne le texte à gauche */
-    margin-left: 0; /* Supprime toute marge supplémentaire à gauche */
-    padding-left: 10px; /* Ajoute un léger espace pour ne pas coller au bord */
+        text-align: left; /* Aligne le texte à gauche */
+        margin-left: 0; /* Supprime toute marge externe */
+        padding-left: 10px; /* Ajoute un espace intérieur pour ne pas coller au bord */
+        margin-right: auto; /* Centrer l'ensemble horizontalement, si nécessaire */
+        width: 100%; /* S'assure que l'élément occupe toute la largeur disponible */
+    }
 }
-
 
     button {
         font-size: 0.85rem;
