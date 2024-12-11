@@ -247,7 +247,7 @@ footer {
     .consentement {
         text-align: left; /* Aligne le texte à gauche */
         margin-left: 0; /* Supprime toute marge externe */
-        padding-left: 10px; /* Ajoute un espace intérieur pour ne pas coller au bord */
+        padding-left: 5px; /* Ajoute un espace intérieur pour ne pas coller au bord */
         margin-right: auto; /* Centrer l'ensemble horizontalement, si nécessaire */
         width: 100%; /* S'assure que l'élément occupe toute la largeur disponible */
     }
