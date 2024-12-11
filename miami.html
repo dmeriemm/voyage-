@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvre Miami</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            position: relative;
+            background: url('images/miami.jpg') no-repeat center center/cover; /* Image de fond */
+            height: 60vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        /* Superposition translucide */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Couche sombre */
+            z-index: 1;
+        }
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            position: relative; /* Texte au-dessus de la couche */
+            z-index: 2;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease; /* Transition douce */
+        }
+        nav a:hover {
+            color: #00bcd4; /* Change de couleur au survol */
+        }
+        section {
+            padding: 20px;
+            opacity: 0; /* Initialement invisible */
+            transform: translateY(20px); /* Déplacé vers le bas */
+            transition: opacity 1s ease, transform 1s ease; /* Transition d'apparition */
+        }
+        section.visible {
+            opacity: 1; /* Visible lorsqu'elle est dans le viewport */
+            transform: translateY(0); /* Revient à sa position initiale */
+        }
+        .place {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .place img {
+            width: 80%; 
+            max-width: 400px; 
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.5s ease; /* Transition pour l'effet zoom */
+        }
+        .place img:hover {
+            transform: scale(1.1); /* Zoom sur survol */
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue à Miami</h1>
+    </header>
+    <nav>
+        <a href="#south-beach">South Beach</a>
+        <a href="#little-havana">Little Havana</a>
+        <a href="#vizcaya">Vizcaya Museum</a>
+    </nav>
+    <section id="south-beach">
+        <h2>South Beach</h2>
+        <div class="place">
+            <img src="images/south.jpg" alt="South Beach">
+            <p>South Beach est célèbre pour ses plages magnifiques, son eau turquoise et son ambiance vibrante, parfaite pour profiter du soleil et de la vie nocturne.</p>
+        </div>
+    </section>
+    <section id="little-havana">
+        <h2>Little Havana</h2>
+        <div class="place">
+            <img src="images/havane.jpg" alt="Little Havana">
+            <p>Little Havana est un quartier emblématique de Miami, connu pour son héritage cubain, ses restaurants traditionnels et ses spectacles de musique live.</p>
+        </div>
+    </section>
+    <section id="vizcaya">
+        <h2>Vizcaya Museum and Gardens</h2>
+        <div class="place">
+            <img src="images/Vizcaya.jpg" alt="Vizcaya Museum">
+            <p>Le Vizcaya Museum and Gardens est une magnifique villa historique entourée de jardins luxuriants, offrant un aperçu de l'élégance de Miami au début du 20e siècle.</p>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Découvre Miami - Tous droits réservés</p>
+        <button onclick="goBack()">Retour</button>
+    </footer>
+
+    <script>
+        // Observer pour détecter quand une section entre dans le viewport
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 }); // Détecte quand 20% d'une section est visible
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        function goBack() {
+        window.history.back();
+    }
+    </script>
+</body>
+</html>
+

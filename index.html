@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="jav.js" defer></script>
+
+    <body>
+
+        <header>
+            <nav>
+                <!-- Prénom Nom aligné à gauche -->
+                <div><a href="#prenom-nom">Meriem Toualbi</a></div>
+                <!-- Menu de navigation aligné à droite -->
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="files/meriem.cv.pdf" download="meriem.cv.pdf">À Propos</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+
+                 </ul>
+            </nav>
+        </header>
+    
+        <!-- Section photo de profil -->
+        <section id="photo-profil">
+            <div style="border-radius: 50%; overflow: hidden; width: 150px; height: 150px;">
+                <img src="images/photo.jpg" alt="Photo de Meriem Toualbi">
+            </div>
+        </section>
+    
+        <!-- Section Edito -->
+        <section id="edito">
+            <blockquote>À chaque voyage, nous revenons différents, transformés par ce que nous avons vu, ressenti, et découvert.</blockquote>
+        </section>
+    <!-- Section Projets -->
+<section id="projets">
+    <div class="projects">
+        <div class="project">
+            <a href="manhattan.html">
+                <h3>Manhattan</h3>
+            </a> <!-- Fermeture du lien a -->
+            
+        </div>
+        <div class="project">
+            <a href="miami.html">
+                <h3>Miami</h3>
+            </a> <!-- Fermeture du lien a -->
+        </div>
+        <div class="project">
+            <a href="Australie.html">
+                <h3>Australie</h3>
+            </a> <!-- Fermeture du lien a -->
+        </div>
+        <div class="project">
+            <a href="Tokyo.html">
+                <h3>Tokyo</h3>
+            </a> <!-- Fermeture du lien a -->
+        </div>
+        <div class="project">
+            <a href="Sahara.html">
+                <h3>Le désert Algérien</h3>
+            </a> <!-- Fermeture du lien a -->
+        </div>
+        <div class="project">
+            <a href="Guadeloupe.html">
+                <h3>Guadeloupe</h3>
+            </a> <!-- Fermeture du lien a -->
+        </div>
+    </div>
+</section> <!-- Fermeture correcte de la section -->
+<!-- Section Contact -->
+<section id="contact">
+    <form id="contact-form">
+        <h2>Contactez-nous</h2>
+
+        <!-- Champ Prénom -->
+        <div class="form-group">
+            <label for="first-name">Prénom :</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Votre prénom" required>
+        </div>
+
+        <!-- Champ Nom -->
+        <div class="form-group">
+            <label for="last-name">Nom :</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Votre nom" required>
+        </div>
+
+        <!-- Champ Courriel -->
+        <div class="form-group">
+            <label for="e-mail">Courriel :</label>
+            <input type="email" id="e-mail" name="e-mail" placeholder="Votre adresse email" required>
+        </div>
+
+        <!-- Champ Sujet -->
+        <div class="form-group">
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required>
+        </div>
+
+        <!-- Consentement RGPD -->
+        <div class="consentement">
+            <input type="checkbox" id="rgpd" name="rgpd" required>
+            <label for="rgpd">J'accepte les conditions de confidentialité et la politique de traitement des données conformément au RGPD.</label>
+        </div>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+<!-- Barrière de cookies -->
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+        <p>Merci pour votre visite ! N'oubliez pas de nous contacter si vous avez des questions ou des besoins.</p>
+        <button id="accept-cookies" class="cookie-btn">Accepter</button>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Meriem Toualbi. Tous droits réservés.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

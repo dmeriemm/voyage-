@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvre Tokyo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            line-height: 1.6;
+        }
+        header {
+            background: url('images/tokyo.jpg') no-repeat center center/cover; /* Image de fond */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Superposition sombre */
+            z-index: 1;
+        }
+        header h1 {
+            font-size: 4em;
+            margin: 0;
+            z-index: 2;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        header p {
+            font-size: 1.5em;
+            z-index: 2;
+            margin-top: 10px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .card p {
+            color: #555;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue à Tokyo</h1>
+        <p>La ville qui ne dort jamais</p>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Informations générales</h2>
+            <p>Tokyo est la capitale du Japon et l'une des plus grandes villes du monde. Elle combine modernité et traditions avec ses gratte-ciels, ses temples anciens, et sa culture unique.</p>
+        </div>
+        <div class="card">
+            <h2>Explorez Tokyo</h2>
+            <p>Découvrez les sites incontournables de Tokyo, tels que le **Temple Senso-ji**, la **Tokyo Tower**, ou le quartier animé de **Shibuya**. Chaque coin de la ville offre une nouvelle expérience à vivre !</p>
+            <p>Pour en savoir plus, visitez la page Wikipédia de Tokyo : <a href="https://fr.wikipedia.org/wiki/Tokyo" target="_blank">Tokyo sur Wikipédia</a>.</p>
+        </div>
+        <div class="card">
+            <h2>Culture japonaise</h2>
+            <p>Tokyo est également le centre culturel du Japon, avec ses musées, galeries d'art, et événements comme le **Tokyo Skytree**, ainsi que ses traditions comme le **Hanami** et la cérémonie du thé.</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Découvre Tokyo - Tous droits réservés</p>
+        <button onclick="goBack()">Retour</button>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+    </footer>
+   
+</body>
+</html>
+
